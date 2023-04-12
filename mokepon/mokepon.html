@@ -23,19 +23,26 @@
             <input type="radio" name="mascota" id="tucapalma"/>
             <label for="pydos">Pydos</label>
             <input type="radio" name="mascota" id="pydos"/>
-            <button>Seleccionar</button>
+            <button id="boton-mascota">Seleccionar</button>
         </section>
         <section id="seleccionar-ataque">
             <h2>Elige tu ataque: </h2>
     
-            <p>Tu mascota tiene <span>3</span> vidas</p>
-            <p>la mascota del enemigo tiene <span>3</span> vidas</p>
+            <p>Tu mascota <span id="mascota-jugador">&nbsp;</span> tiene <span>3</span> vidas</p>
+            <p>la mascota <span id=""masctoa-enemigo></span> del enemigo tiene <span>3</span> vidas</p>
+            <div>
+                <button id="boton-fuego">Fuego! 🔥</button>
+                <button id="boton-agua">Agua! 💦</button>
+                <button id="boton-tierra">Tierra! 🌱</button>
+            </div>
         </section>
-        <div>
-            <button>Fuego! 🔥</button>
-            <button>Agua! 💦</button>
-            <button>Planta! 🌱</button>
-        </div>
+        <section id="mensajes">
+            <p>Tu mascota atacó con Fuego, la mascota del enemigo atacó con Agua</p>
+        </section>
+        <section id="reiniciar">
+            <button id="boton-reiniciar">Reiniciar</button>
+        </section>
     </main>
+    <script src="js/mokepon.js"></script>
 </body>
 </html>
