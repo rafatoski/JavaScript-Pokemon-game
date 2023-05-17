@@ -25,6 +25,9 @@ function aleatorio(min,max){
 }
 
 function seleccionarmascotaJugador(){
+
+    
+
     let inputHipodoge = document.getElementById('hipodoge')
     let inputCapipepo = document.getElementById('capipepo')
     let inputRatigueya = document.getElementById('ratigueya')
@@ -47,12 +50,19 @@ function seleccionarmascotaJugador(){
         spanMascotaJugador.innerHTML = 'Pydos' 
     }else {
         alert("Selecciona una mascota")
+        reiniciarJuego()
     }
 
     seleccionarMascotaEnemigo() 
 }
 
 function seleccionarMascotaEnemigo(){
+    let sectionSeleccionarMascota = document.getElementById('seleccionar-mascota')
+    sectionSeleccionarMascota.style.display = "none"
+    
+    let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
+    sectionSeleccionarAtaque.style.display = "block"
+
     let enemigoAleatorio = aleatorio(1,6)
     const spanMascotaEnemigo = document.getElementById('mascota-enemigo')
 
@@ -142,11 +152,22 @@ function crearMensaje() {
 }
 
 function crearMensajeFinal(resultadoFinal){
+
+    let sectionBotonReiniciar = document.getElementById('reiniciar')
+    sectionBotonReiniciar.style.display = "block"
+
     let sectionMensajes = document.getElementById('mensajes')
     let parrafo  = document.createElement('p')
     parrafo.innerHTML = (resultadoFinal)
     
     sectionMensajes.appendChild(parrafo)
+
+    let botonFuego = document.getElementById('boton-fuego')
+    botonFuego.disabled = true 
+    let botonAgua = document.getElementById('boton-agua')
+    botonAgua.disabled = true 
+    let botonTierra = document.getElementById('boton-tierra')
+    botonTierra.disabled = true
 }
 
 function reiniciarJuego(){

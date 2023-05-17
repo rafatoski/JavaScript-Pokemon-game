@@ -5,42 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokepon Mechanic Test</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <main >
-        <h1 >MOKEPON!🔥💦🌱</h1>
-        <section id="selecionar-mascota">
-            <h2>Elige tu mascota: </h2>
-            <label for="hipodoge">Hipodoge</label>
-            <input type="radio" name="mascota" id="hipodoge"/>
-            <label for="capipepo">Capipepo</label>
-            <input type="radio" name="mascota" id="capipepo"/>
-            <label for="ratigueya">Ratigueya</label>
-            <input type="radio" name="mascota" id="ratigueya"/>
-            <label for="langostelvis">Langostelvis</label>
-            <input type="radio" name="mascota" id="langostelvis"/>
-            <label for="tucapalma">Tucapalma</label>
-            <input type="radio" name="mascota" id="tucapalma"/>
-            <label for="pydos">Pydos</label>
-            <input type="radio" name="mascota" id="pydos"/>
-            <button id="boton-mascota">Seleccionar</button>
+        <h1 ><img src="img/logoPokemon.png" alt="Logo Pokemon"></h1>
+        <section id="seleccionar-mascota" class="block">
+            <h2 class="my">Elige tu mascota: </h2>
+            <div class="seleccionar-mascota my">
+                <div class="card">
+                    <label class="tarjeta-de-pokemon " for="hipodoge">Hipodoge</label>
+                    <input type="radio" name="mascota" id="hipodoge"/>
+                </div>
+                <div class="card">
+                    <label class="tarjeta-de-pokemon"  for="capipepo">Capipepo</label>
+                    <input type="radio" name="mascota" id="capipepo"/>
+                </div>
+                <div class="card">
+                    <label class="tarjeta-de-pokemon"  for="ratigueya">Ratigueya</label>
+                    <input type="radio" name="mascota" id="ratigueya"/>
+                </div>
+                <div class="card">
+                    <label class="tarjeta-de-pokemon"  for="langostelvis">Langostelvis</label>
+                    <input type="radio" name="mascota" id="langostelvis"/>
+                </div>
+                <div class="card">
+                    <label class="tarjeta-de-pokemon"  for="tucapalma">Tucapalma</label>
+                    <input type="radio" name="mascota" id="tucapalma"/>
+                </div>
+                <div class="card">
+                    <label class="tarjeta-de-pokemon"  for="pydos">Pydos</label>
+                    <input type="radio" name="mascota" id="pydos"/>
+                </div>
+            </div>
+            <button id="boton-mascota" class="btn">Seleccionar</button>
         </section>
-        <section id="seleccionar-ataque">
-            <h2>Elige tu ataque: </h2>
+        <section id="seleccionar-ataque" style="display: none;">
+            <h2 class="my">Elige tu ataque: </h2>
     
             <p>Tu mascota <span id="mascota-jugador">&nbsp;</span> tiene <span id="vidas-jugador">3</span> vidas</p>
             <p>la mascota <span id="mascota-enemigo"></span> del enemigo tiene <span id="vidas-enemigo">3</span> vidas</p>
-            <div>
-                <button id="boton-fuego">Fuego! 🔥</button>
-                <button id="boton-agua">Agua! 💦</button>
-                <button id="boton-tierra">Planta! 🌱</button>
+            <div class="ataques">
+                <div id="boton-fuego" class="btn">Fuego! 🔥</div>
+                <div id="boton-agua" class="btn">Agua! 💦</div>
+                <div id="boton-tierra" class="btn">Planta! 🌱</div>
+                <div id="boton-descansar" class="btn disabled">Descansar 😴</div>
             </div>
         </section>
         <section id="mensajes">
             
         </section>
-        <section id="reiniciar">
-            <button id="boton-reiniciar">Reiniciar</button>
+        <section id="reiniciar" style="display: none;">
+            <button id="boton-reiniciar" class="btn my">Reiniciar</button>
         </section>
     </main>
     <script src="js/mokepon.js"></script>
