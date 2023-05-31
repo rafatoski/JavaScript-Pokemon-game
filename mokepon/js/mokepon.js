@@ -3,7 +3,6 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
-
 function iniciarJuego(){
     let botonMascotaJugador = document.getElementById('boton-mascota')
     botonMascotaJugador.addEventListener('click', seleccionarmascotaJugador)
@@ -48,11 +47,10 @@ function seleccionarmascotaJugador(){
         spanMascotaJugador.innerHTML = 'Tucapalma' 
     }else if(inputPydos.checked){
         spanMascotaJugador.innerHTML = 'Pydos' 
-    }else {
+    }else { 
         alert("Selecciona una mascota")
         reiniciarJuego()
     }
-
     seleccionarMascotaEnemigo() 
 }
 
